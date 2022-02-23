@@ -69,7 +69,9 @@ int FCFS(int reqNum, int head, int *req)
         seekTime += abs(req[i - 1] - req[i]);
     }
 
-    cout << "\nThe Seek time for selected algorithm is: " << seekTime;
+    cout << "\nThe Seek Distance for selected algorithm is: " << seekTime;
+
+    cout << "\nThe Average Seek Distance for selected algorithm is: " << seekTime/reqNum;
     return seekTime;
 }
 int SSTF(int reqNum, int head, int *req)
@@ -87,11 +89,6 @@ int SSTF(int reqNum, int head, int *req)
             minIndex = i;
         }
     }
-    // cout << minIndex << endl;
-    // for (int i = 0; i < reqNum; i++)
-    // {
-    //     cout << " " << req[i];
-    // }
     if (req[minIndex] < head)
     {
 
@@ -130,7 +127,8 @@ int SSTF(int reqNum, int head, int *req)
         }
     }
 
-    cout << "\nThe Seek time for selected algorithm is: " << seekTime;
+    cout << "\nThe Seek Distance for selected algorithm is: " << seekTime;
+    cout << "\nThe Average Seek Distance for selected algorithm is: " << seekTime/reqNum;
     return seekTime;
 }
 int SCAN(int reqNum, int head, int *req)
@@ -209,7 +207,8 @@ int SCAN(int reqNum, int head, int *req)
         }
     }
 
-    cout << "\nThe Seek time for selected algorithm is: " << seekTime;
+    cout << "\nThe Seek Distance for selected algorithm is: " << seekTime;
+    cout << "\nThe Average Seek Distance for selected algorithm is: " << seekTime/reqNum;
     return seekTime;
 }
 int CSCAN(int reqNum, int head, int *req)
@@ -300,6 +299,7 @@ int CSCAN(int reqNum, int head, int *req)
         }
     }
 
-    cout << "\nThe Seek time for selected algorithm is: " << seekTime;
+    cout << "\nThe Seek Distance for selected algorithm is: " << seekTime;
+    cout << "\nThe Average Seek Distance for selected algorithm is: " << seekTime/reqNum;
     return seekTime;
 }
